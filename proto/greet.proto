@@ -5,13 +5,13 @@ package greet_service;
 option go_package = ".;pb";
 
 service GreetService {
-    // simple RPC
+
     rpc SayHello(NoParam) returns (HelloResponse);
-    // server streaming RPC
+
     rpc SayHelloServerStreaming(NamesList) returns (stream HelloResponse);
-    // client streaming RPC
+
     rpc SayHelloClientStreaming(stream HelloRequest) returns (MessagesList);
-    // bidirectional streaming RPC
+
     rpc SayHelloBidirectionalStreaming(stream HelloRequest) returns (stream HelloResponse);
 }
 
